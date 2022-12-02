@@ -103,7 +103,7 @@ module.exports = {
   inativar: id => {
     return new Promise((aceito, rejeitado) => {
       db.query(
-        'UPDATE multas SET ativo = 0 WHERE id_multa = ?',
+        'UPDATE multas SET ativo = FALSE WHERE id_multa = ?',
         [id],
         (error, results) => {
           if (error) {
